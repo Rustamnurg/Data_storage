@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>New Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Url</th>
+      <th>Description</th>
+      <th>Url</th>
+      <th>Url to image</th>
+      <th>Author</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @new_items.each do |new_item| %>
+      <tr>
+        <td><%= new_item.title %></td>
+        <td><%= new_item.content %></td>
+        <td><%= new_item.url %></td>
+        <td><%= new_item.description %></td>
+        <td><%= new_item.url %></td>
+        <td><%= new_item.url_to_image %></td>
+        <td><%= new_item.author %></td>
+        <td><%= link_to 'Show', new_item %></td>
+        <td><%= link_to 'Edit', edit_new_item_path(new_item) %></td>
+        <td><%= link_to 'Destroy', new_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New New Item', new_new_item_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Data Storage Developments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Url</th>
+      <th>Description</th>
+      <th>Url</th>
+      <th>Url to image</th>
+      <th>Author</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data_storage_developments.each do |data_storage_development| %>
+      <tr>
+        <td><%= data_storage_development.title %></td>
+        <td><%= data_storage_development.content %></td>
+        <td><%= data_storage_development.url %></td>
+        <td><%= data_storage_development.description %></td>
+        <td><%= data_storage_development.url %></td>
+        <td><%= data_storage_development.url_to_image %></td>
+        <td><%= data_storage_development.author %></td>
+        <td><%= link_to 'Show', data_storage_development %></td>
+        <td><%= link_to 'Edit', edit_data_storage_development_path(data_storage_development) %></td>
+        <td><%= link_to 'Destroy', data_storage_development, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Data Storage Development', new_data_storage_development_path %>

@@ -1,0 +1,2 @@
+class DataStorageDevelopment < ApplicationRecord
+end
